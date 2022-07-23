@@ -7,21 +7,16 @@
 /////////   HEADER ANIMATION    ///////////
 
 // Fade Up Hero 01 
-var fadeUpHero01 = anime.timeline({
+var fadeUpHero01 = anime({
+  targets: '.fu-hero-01 .tricksword',
+  translateY: [100,0],
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 150 * i,
   loop: false,
   autoplay: false,
 });
-
-fadeUpHero01 
-  .add({
-    targets: '.fu-hero-01 .tricksword',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 150 * i
-  })
   
 // Play animation when scrolled into view
 $('#hero').on('inview', function(event, isInView) {
@@ -33,340 +28,176 @@ $('#hero').on('inview', function(event, isInView) {
   }
 });
 
-// Fade Up Hero 02 
-var fadeUpHero02 = anime.timeline({
-  loop: false,
-  autoplay: false,
-});
 
-fadeUpHero02
-  .add({
-    targets: '.fu-hero-02 .tricksword',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 350 + 150 * i
-  })
-  
-// Play animation when scrolled into view
-$('#hero').on('inview', function(event, isInView) {
-  if (isInView) {
-    fadeUpHero02.play();
-    fadeUpHero02.restart();
-  } else {
-    fadeUpHero02.seek(0);
-  }
-});
-
-// Fade Up Hero 03 
-var fadeUpHero03 = anime.timeline({
-  loop: false,
-  autoplay: false,
-});
-
-fadeUpHero03
-  .add({
-    targets: '.fu-hero-03 .tricksword',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 550 + 150 * i
-  })
-  
-// Play animation when scrolled into view
-$('#hero').on('inview', function(event, isInView) {
-  if (isInView) {
-    fadeUpHero03.play();
-    fadeUpHero03.restart();
-  } else {
-    fadeUpHero03.seek(0);
-  }
-});
+////////////////////   PROGRESS STEPS    ////////////////////
 
 
-// Fade Up Hero 04
-var fadeUpHero04 = anime.timeline({
-  loop: false,
-  autoplay: false,
-});
-
-fadeUpHero04
-  .add({
-    targets: '.fu-hero-04 .tricksword',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 600 + 150 * i
-  })
-  
-// Play animation when scrolled into view
-$('#hero').on('inview', function(event, isInView) {
-  if (isInView) {
-    fadeUpHero04.play();
-    fadeUpHero04.restart();
-  } else {
-    fadeUpHero04.seek(0);
-  }
-});
-
-
-// Fade Up Hero 05
-var fadeUpHero05 = anime.timeline({
-  loop: false,
-  autoplay: false,
-});
-
-fadeUpHero05
-  .add({
-    targets: '.fu-hero-05 .tricksword',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 1000 + 150 * i
-  })
-  
-// Play animation when scrolled into view
-$('#hero').on('inview', function(event, isInView) {
-  if (isInView) {
-    fadeUpHero05.play();
-    fadeUpHero05.restart();
-  } else {
-    fadeUpHero05.seek(0);
-  }
-});
-
-
-
-
-
-/////////   PROGRESS STEPS    ///////////
-
-
-//////////////////// FADE OUT STEPS ////////////////////
+//////// FADE OUT STEPS //////// 
 
 // Fade Out Step 01
 var fadeOutStep01 = anime.timeline({
+  targets: '.fu-step-01 .tricksword',
+  translateY: [0,"-1em"],
+  opacity: [1,0],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
-  autoplay: false,
+  autoplay: false
 });
-
-fadeOutStep01
-  .add({
-    targets: '.fu-step-01 .tricksword',
-    translateY: [0,"-1em"],
-    translateZ: 0,
-    opacity: [1,0],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
-
 
 // Fade Out Step 02
 var fadeOutStep02 = anime.timeline({
+  targets: '.fu-step-02 .tricksword',
+  translateY: [0,"-1em"],
+  opacity: [1,0],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
-  autoplay: false,
+  autoplay: false
 });
-
-fadeOutStep02
-  .add({
-    targets: '.fu-step-02 .tricksword',
-    translateY: [0,"-1em"],
-    translateZ: 0,
-    opacity: [1,0],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
-
 
 // Fade Out Step 03
 var fadeOutStep03 = anime.timeline({
+  targets: '.fu-step-03 .tricksword',
+  translateY: [0,"-1em"],
+  opacity: [1,0],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
-  autoplay: false,
+  autoplay: false
 });
-
-fadeOutStep03
-  .add({
-    targets: '.fu-step-03 .tricksword',
-    translateY: [0,"-1em"],
-    translateZ: 0,
-    opacity: [1,0],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
-
 
 // Fade Out Step 04
 var fadeOutStep04 = anime.timeline({
+  targets: '.fu-step-04 .tricksword',
+  translateY: [0,"-1em"],
+  opacity: [1,0],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
-  autoplay: false,
+  autoplay: false
 });
 
-fadeOutStep04
-  .add({
-    targets: '.fu-step-04 .tricksword',
-    translateY: [0,"-1em"],
-    translateZ: 0,
-    opacity: [1,0],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
 
-
-
-//////////////////// FADE IN STEPS ////////////////////
+//////// FADE IN STEPS ////////
 
 // Fade Up Step 01
 var fadeUpStep01 = anime.timeline({
+  targets: '.fu-step-01 .tricksword',
+  translateY: ["2em",0],
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
   autoplay: false,
 });
-
-fadeUpStep01
-  .add({
-    targets: '.fu-step-01 .tricksword',
-    translateY: ["2em",0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
-
 
 
 // Fade Up Step 02
 var fadeUpStep02 = anime.timeline({
+  targets: '.fu-step-02 .tricksword',
+  translateY: ["2em",0],
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
   autoplay: false,
 });
-
-fadeUpStep02
-  .add({
-    targets: '.fu-step-02 .tricksword',
-    translateY: ["2em",0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
-
-
 
 // Fade Up Step 03
 var fadeUpStep03 = anime.timeline({
+  targets: '.fu-step-03 .tricksword',
+  translateY: ["2em",0],
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
   autoplay: false,
 });
-
-fadeUpStep03
-  .add({
-    targets: '.fu-step-03 .tricksword',
-    translateY: ["2em",0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
-
 
 
 // Fade Up Step 04
 var fadeUpStep04 = anime.timeline({
+  targets: '.fu-step-04 .tricksword',
+  translateY: ["2em",0],
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 1000,
+  delay: (el, i) => 100 + 100 * i,
   loop: false,
   autoplay: false,
 });
 
-fadeUpStep04
-  .add({
-    targets: '.fu-step-04 .tricksword',
-    translateY: ["2em",0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 100 + 100 * i
-  })
 
 //////////////////// FADE OUT PARAGRAPHS ////////////////////
 
 // Fade Out Paragraph 01
 var fadeOutParagraph01 = anime.timeline({
+  targets: '.fu-p-01',
+  translateY: [0,"-100%"],
+  opacity: [1,0],
+  easing: "easeOutExpo",
+  duration: 400,
+  delay: (el, i) => 300 + 100 * i,
   loop: false,
   autoplay: false,
 });
 
-fadeOutParagraph01
-  .add({
-    targets: '.fu-p-01',
-    translateY: [0,"100%"],
-    translateZ: 0,
-    opacity: [1,0],
-    easing: "easeOutExpo",
-    duration: 400,
-    delay: (el, i) => 300 + 100 * i
-  })
-  
-  
+
 //////////////////// FADE IN PARAGRAPHS ////////////////////
 
 // Fade In Paragraph 01
 var fadeInParagraph01 = anime.timeline({
+  targets: '.fu-p-01',
+  translateY: ["-100%",0],
+  translateZ: 0,
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 400,
+  delay: (el, i) => 300 + 100 * i,
   loop: false,
   autoplay: false,
 });
 
-fadeInParagraph01
-  .add({
-    targets: '.fu-p-01',
-    translateY: ["-100%",0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 400,
-    delay: (el, i) => 300 + 100 * i
-  })
 
 //////////// Play animation when scrolled into view ////////////
 
 //REST STEPS
 $('#scroll-anim').on('inview', function(event, isInView) {
   if (isInView) {
-    fadeOutStep01.play()
-    fadeOutStep01.restart()
-    fadeOutParagraph01.play()
-    fadeOutParagraph01.restart()
+    fadeOutStep01.seek(0)
+    $('#number-step-01').addClass('hidden');
+    $('#headline-step-01').addClass('hidden');
     $('#divider-step-01').addClass('hidden');
+    $('#headline-step-02').addClass('hidden');
+    $('#number-step-02').addClass('hidden');
+    $('#divider-step-02').addClass('hidden');
+    $('#headline-step-03').addClass('hidden');
+    $('#number-step-03').addClass('hidden');
+    $('#divider-step-03').addClass('hidden');
+    $('#headline-step-04').addClass('hidden');
+    $('#number-step-04').addClass('hidden');
+    $('#divider-step-04').addClass('hidden');
   }else {
   }
 });
 
 //Fade in steps
-var scrollableElement = document.body; //document.getElementById('scrollableElement');
-
-scrollableElement.addEventListener('wheel', checkScrollDirection);
+document.body.addEventListener('wheel', checkScrollDirection);
 
 var direction = ""
 
 function checkScrollDirection(event) {
   if (checkScrollDirectionIsUp(event)) {
-    console.log('UP');
     direction = "UP"
   } else {
-    console.log('Down');
     direction = "DOWN"
   }
 }
@@ -378,34 +209,81 @@ function checkScrollDirectionIsUp(event) {
   return event.deltaY < 0;
 }
 
-  //Fade in steps
+//Fade in steps
 $('#trigger-step-01').on('inview', function(event, isInView) {
   if(direction == "UP"){
-    console.log("Dir"+direction)
   } else {
-    console.log("Dir"+direction)
   	if (isInView) {
-        console.log("Sono in view");
         fadeUpStep01.play();
         fadeInParagraph01.play();
         $('#headline-step-01').removeClass('step-idle');
         $('#number-step-01').removeClass('step-idle');
         $('#divider-step-01').removeClass('hidden');
         $('#p-step-01').removeClass('step-idle');
+        $('#headline-step-02').addClass('hidden');
+        $('#number-step-02').addClass('hidden');
+        $('#divider-step-02').addClass('hidden');
+        $('#p-step-02').addClass('hidden');
     }else {
-
     }
-    }
-  });
-
-
-$('#trigger-step-05').on('inview', function(event, isInView) {
-  if (isInView) {
-    $('#headline-step-04').addClass('step-idle');
-    $('#p-step-04').addClass('step-idle');
-  }else {    
   }
 });
+
+
+$('#trigger-step-02').on('inview', function(event, isInView) {
+  if(direction == "UP"){
+  } else {
+    if (isInView && $('#headline-step-02').hasClass('hidden')) {
+        fadeUpStep02.play();
+        fadeOutParagraph01.play();
+        $('#headline-step-01').addClass('step-idle');
+        $('#number-step-01').addClass('step-idle');
+        $('#p-step-01').addClass('step-idle');
+        $('#headline-step-02').removeClass('hidden');
+        $('#number-step-02').removeClass('hidden');
+        $('#divider-step-02').removeClass('hidden');
+        $('#p-step-02').removeClass('hidden');
+    }else {
+    }
+  }
+});
+
+$('#trigger-step-03').on('inview', function(event, isInView) {
+  if(direction == "UP"){
+  } else {
+    if (isInView && $('#headline-step-03').hasClass('hidden')) {
+      fadeUpStep03.play();
+      $('#headline-step-02').addClass('step-idle');
+      $('#number-step-02').addClass('step-idle');
+      $('#p-step-02').addClass('step-idle');
+      $('#headline-step-03').removeClass('hidden');
+      $('#number-step-03').removeClass('hidden');
+      $('#divider-step-03').removeClass('hidden');
+      $('#p-step-03').removeClass('hidden');
+    }else {
+    }
+  }
+});
+  
+
+
+$('#trigger-step-04').on('inview', function(event, isInView) {
+  if(direction == "UP"){
+  } else {
+    if (isInView && $('#headline-step-04').hasClass('hidden')) {
+      fadeUpStep04.play();
+      $('#headline-step-03').addClass('step-idle');
+      $('#number-step-03').addClass('step-idle');
+      $('#p-step-03').addClass('step-idle');
+      $('#headline-step-04').removeClass('hidden');
+      $('#number-step-04').removeClass('hidden');
+      $('#divider-step-04').removeClass('hidden');
+      $('#p-step-04').removeClass('hidden');
+    }else {
+    }
+  }
+});
+
 
 
 
