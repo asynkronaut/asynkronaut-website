@@ -173,18 +173,18 @@ var fadeInParagraph01 = anime.timeline({
 $('#scroll-anim').on('inview', function(event, isInView) {
   if (isInView) {
     fadeOutStep01.seek(0)
-    // $('#number-step-01').addClass('hidden');
-    // $('#headline-step-01').addClass('hidden');
-    // $('#divider-step-01').addClass('hidden');
-    // $('#headline-step-02').addClass('hidden');
-    // $('#number-step-02').addClass('hidden');
-    // $('#divider-step-02').addClass('hidden');
-    // $('#headline-step-03').addClass('hidden');
-    // $('#number-step-03').addClass('hidden');
-    // $('#divider-step-03').addClass('hidden');
-    // $('#headline-step-04').addClass('hidden');
-    // $('#number-step-04').addClass('hidden');
-    // $('#divider-step-04').addClass('hidden');
+    $('#number-step-01').addClass('hidden');
+    $('#headline-step-01').addClass('hidden');
+    $('#divider-step-01').addClass('hidden');
+    $('#headline-step-02').addClass('hidden');
+    $('#number-step-02').addClass('hidden');
+    $('#divider-step-02').addClass('hidden');
+    $('#headline-step-03').addClass('hidden');
+    $('#number-step-03').addClass('hidden');
+    $('#divider-step-03').addClass('hidden');
+    $('#headline-step-04').addClass('hidden');
+    $('#number-step-04').addClass('hidden');
+    $('#divider-step-04').addClass('hidden');
   }else {
   }
 });
@@ -234,6 +234,7 @@ $('#trigger-step-02').on('inview', function(event, isInView) {
   if(direction == "UP"){
   } else {
     if (isInView && $('#headline-step-02').hasClass('hidden')) {
+        console.log("Entro animazione 2")
         fadeUpStep02.play();
         fadeOutParagraph01.play();
         $('#headline-step-01').addClass('step-idle');
